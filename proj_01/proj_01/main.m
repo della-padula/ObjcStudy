@@ -47,21 +47,18 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Fraction *frac1 = [[Fraction alloc] init];
-        Fraction *frac2 = [[Fraction alloc] init];
+        int n, number, triangularNumber;
         
-        [frac1 setNumerator:2];
-        [frac1 setDenominator:3];
+        NSLog(@"What triangular number do you want?");
+        scanf("%i", &number);
         
-        [frac2 setNumerator:3];
-        [frac2 setDenominator:7];
+        triangularNumber = 0;
         
-        NSLog(@"First fraction is: %i/%i", [frac1 numerator], [frac1 denominator]);
-        [frac1 print];
+        for ( n = 1; n <= number; ++n ) {
+            triangularNumber += n;
+        }
         
-        NSLog(@"Second fraction is: %i/%i", [frac2 numerator], [frac2 denominator]);
-        [frac2 print];
-        
+        NSLog(@"Triangular Number %i is %i\n", number, triangularNumber);
     }
     return 0;
 }
