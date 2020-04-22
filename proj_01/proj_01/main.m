@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Fraction.h"
 #import "Inheritance.h"
+#import "Square.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -36,6 +37,12 @@ int main(int argc, const char * argv[]) {
         [rect setWidth:10 andHeight:20];
         NSLog(@"Rectangle Area : %i", [rect area]);
         NSLog(@"Rectangle Perimeter : %i", [rect perimeter]);
+        
+        Square *square = [[Square alloc] init];
+        [square setSide:30];
+        NSLog(@"Square Side : %i", [square side]);
+        NSLog(@"Square Area : %i", [square area]);
+        NSLog(@"Square Perimeter : %i", [square perimeter]);
     }
     return 0;
 }
