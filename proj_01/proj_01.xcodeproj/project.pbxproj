@@ -12,6 +12,7 @@
 		B088AE2B24505F7E00928EF1 /* Inheritance.m in Sources */ = {isa = PBXBuildFile; fileRef = B088AE2A24505F7E00928EF1 /* Inheritance.m */; };
 		B088AE2E2450616C00928EF1 /* Square.m in Sources */ = {isa = PBXBuildFile; fileRef = B088AE2D2450616C00928EF1 /* Square.m */; };
 		B088AE31245062F100928EF1 /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = B088AE30245062F100928EF1 /* Rectangle.m */; };
+		B088AE34245072BB00928EF1 /* Complex.m in Sources */ = {isa = PBXBuildFile; fileRef = B088AE33245072BB00928EF1 /* Complex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		B088AE2D2450616C00928EF1 /* Square.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Square.m; sourceTree = "<group>"; };
 		B088AE2F245062E500928EF1 /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 		B088AE30245062F100928EF1 /* Rectangle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
+		B088AE322450726D00928EF1 /* Complex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Complex.h; sourceTree = "<group>"; };
+		B088AE33245072BB00928EF1 /* Complex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Complex.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				B088AE2D2450616C00928EF1 /* Square.m */,
 				B088AE2F245062E500928EF1 /* Rectangle.h */,
 				B088AE30245062F100928EF1 /* Rectangle.m */,
+				B088AE322450726D00928EF1 /* Complex.h */,
+				B088AE33245072BB00928EF1 /* Complex.m */,
 			);
 			path = proj_01;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				B088AE20244F150C00928EF1 /* main.m in Sources */,
 				B088AE2B24505F7E00928EF1 /* Inheritance.m in Sources */,
 				B088AE282450255B00928EF1 /* Fraction.m in Sources */,
+				B088AE34245072BB00928EF1 /* Complex.m in Sources */,
 				B088AE31245062F100928EF1 /* Rectangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
