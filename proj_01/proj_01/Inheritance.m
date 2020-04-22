@@ -10,6 +10,9 @@
 #import "Inheritance.h"
 
 @implementation ClassB
+-(void) initVar {
+    x = 200;
+}
 -(void) printVar {
     NSLog(@"x = %i", x);
 }

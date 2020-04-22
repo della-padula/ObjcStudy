@@ -17,6 +17,7 @@
 
 
 @interface ClassB : ClassA
+-(void) initVar;
 -(void) printVar;
 @end
 

@@ -29,10 +29,14 @@ int main(int argc, const char * argv[]) {
         [aFraction add: bFraction];
         [aFraction print];
         
+        NSLog(@"---------");
+        
         ClassB *b = [[ClassB alloc] init];
         
         [b initVar];
         [b printVar];
+        
+        NSLog(@"---------");
         
         Rectangle *rect = [[Rectangle alloc] init];
         [rect setWidth:10 andHeight:20];
