@@ -16,6 +16,31 @@
     NSLog(@"%i/%i", numerator, denominator);
 }
 
+-(void) setTo:(int)n over:(int)d {
+    numerator = n;
+    denominator = d;
+}
+
+-(void) reduce {
+    int u = numerator;
+    int v = denominator;
+    int temp;
+    
+    while (v != 0) {
+        temp = u % v;
+        u = v;
+        v = temp;
+    }
+    
+    numerator /= u;
+    denominator /= u;
+}
+
+-(void) add:(Fraction *)f {
+    numerator = numerator * f.denominator + denominator * f.numerator;
+    denominator = denominator * f.denominator;
+}
+
 -(double) convertToNum {
     if(denominator != 0)
         return (double) numerator / denominator;

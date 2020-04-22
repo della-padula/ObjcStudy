@@ -17,13 +17,22 @@ int main(int argc, const char * argv[]) {
         [aFraction setNumerator:1];
         [aFraction setDenominator:4];
         
+        [aFraction setTo:100 over:200];
+        [bFraction setTo:1 over:3];
+        
         [aFraction print];
-        NSLog(@" =");
-        NSLog(@"%g", [aFraction convertToNum]);
+//        NSLog(@" =");
+//        NSLog(@"%g", [aFraction convertToNum]);
         
         [bFraction print];
-        NSLog(@" =");
-        NSLog(@"%g", [bFraction convertToNum]);
+//        NSLog(@" =");
+//        NSLog(@"%g", [bFraction convertToNum]);
+        
+        [aFraction add: bFraction];
+        [aFraction print];
+        
+        [aFraction reduce];
+        [aFraction print];
     }
     return 0;
 }
