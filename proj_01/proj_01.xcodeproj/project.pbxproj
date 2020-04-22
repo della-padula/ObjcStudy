@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B088AE20244F150C00928EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B088AE1F244F150C00928EF1 /* main.m */; };
+		B088AE282450255B00928EF1 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = B088AE272450255B00928EF1 /* Fraction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		B088AE1C244F150C00928EF1 /* proj_01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = proj_01; sourceTree = BUILT_PRODUCTS_DIR; };
 		B088AE1F244F150C00928EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B088AE262450254D00928EF1 /* Fraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		B088AE272450255B00928EF1 /* Fraction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				B088AE1F244F150C00928EF1 /* main.m */,
+				B088AE262450254D00928EF1 /* Fraction.h */,
+				B088AE272450255B00928EF1 /* Fraction.m */,
 			);
 			path = proj_01;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B088AE20244F150C00928EF1 /* main.m in Sources */,
+				B088AE282450255B00928EF1 /* Fraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
