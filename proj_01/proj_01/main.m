@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Fraction.h"
+#import "Inheritance.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -21,18 +22,20 @@ int main(int argc, const char * argv[]) {
         [bFraction setTo:1 over:3];
         
         [aFraction print];
-//        NSLog(@" =");
-//        NSLog(@"%g", [aFraction convertToNum]);
-        
         [bFraction print];
-//        NSLog(@" =");
-//        NSLog(@"%g", [bFraction convertToNum]);
         
         [aFraction add: bFraction];
         [aFraction print];
         
-//        [aFraction reduce];
-//        [aFraction print];
+        ClassB *b = [[ClassB alloc] init];
+        
+        [b initVar];
+        [b printVar];
+        
+        Rectangle *rect = [[Rectangle alloc] init];
+        [rect setWidth:10 andHeight:20];
+        NSLog(@"Rectangle Area : %i", [rect area]);
+        NSLog(@"Rectangle Perimeter : %i", [rect perimeter]);
     }
     return 0;
 }
