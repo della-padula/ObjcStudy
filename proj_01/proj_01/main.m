@@ -10,6 +10,7 @@
 #import "Fraction.h"
 #import "Inheritance.h"
 #import "Square.h"
+#import "Rectangle.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -35,6 +36,13 @@ int main(int argc, const char * argv[]) {
         
         Rectangle *rect = [[Rectangle alloc] init];
         [rect setWidth:10 andHeight:20];
+        
+        XYPoint *originPoint = [[XYPoint alloc] init];
+        [originPoint setX:20 andY:30];
+        
+        rect.origin = originPoint;
+        
+        NSLog(@"Rectangle Origin : (%i, %i)", [rect origin].x, [rect origin].y);
         NSLog(@"Rectangle Area : %i", [rect area]);
         NSLog(@"Rectangle Perimeter : %i", [rect perimeter]);
         

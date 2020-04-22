@@ -20,13 +20,9 @@
 -(void) printVar;
 @end
 
-@interface Rectangle : NSObject
+@interface XYPoint : NSObject
 
-@property int width, height;
--(int) area;
--(int) perimeter;
+@property int x, y;
 
--(void) setWidth:(int)w andHeight: (int) h;
-
+-(void) setX: (int)xVal andY: (int)yVal;
 @end
-

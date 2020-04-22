@@ -7,6 +7,7 @@
 //
 
 #import "Inheritance.h"
+#import "Rectangle.h"
 
 @interface Square : Rectangle
 -(void) setSide: (int) s;

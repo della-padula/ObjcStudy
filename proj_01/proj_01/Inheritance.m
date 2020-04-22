@@ -21,21 +21,11 @@
 }
 @end
 
-@implementation Rectangle
+@implementation XYPoint @synthesize x, y;
 
-@synthesize width, height;
-
--(void) setWidth:(int)w andHeight:(int)h {
-    width = w;
-    height = h;
-}
-
--(int) area {
-    return width * height;
-}
-
--(int) perimeter {
-    return (width + height) * 2;
+-(void) setX:(int)xVal andY:(int)yVal {
+    x = xVal;
+    y = yVal;
 }
 
 @end
