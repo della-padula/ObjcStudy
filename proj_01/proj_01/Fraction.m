@@ -39,6 +39,8 @@
 -(void) add:(Fraction *)f {
     numerator = numerator * f.denominator + denominator * f.numerator;
     denominator = denominator * f.denominator;
+    
+    [self reduce];
 }
 
 -(double) convertToNum {
