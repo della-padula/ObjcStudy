@@ -8,53 +8,42 @@
 
 #import <Foundation/Foundation.h>
 #import "Fraction.h"
+#import "Complex.h"
 #import "Inheritance.h"
 #import "Square.h"
 #import "Rectangle.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Fraction *aFraction = [[Fraction alloc] init];
-        Fraction *bFraction = [[Fraction alloc] init];
+        Fraction *f1 = [[Fraction alloc] init];
+        Fraction *f2 = [[Fraction alloc] init];
+        Fraction *fracResult;
         
-        [aFraction setNumerator:1];
-        [aFraction setDenominator:4];
+        Complex *c1 = [[Complex alloc] init];
+        Complex *c2 = [[Complex alloc] init];
+        Complex *compResult;
         
-        [aFraction setTo:100 over:200];
-        [bFraction setTo:1 over:3];
+        [f1 setTo:1 over:10];
+        [f2 setTo:2 over:15];
         
-        [aFraction print];
-        [bFraction print];
+        [c1 setReal:18.0 andImaginary:2.5];
+        [c2 setReal:-5.0 andImaginary:3.2];
         
-        [aFraction add: bFraction];
-        [aFraction print];
+        [c1 print];
+        NSLog(@"         +");
+        [c2 print];
+        NSLog(@"----------");
+        compResult = [c1 add: c2];
+        [compResult print];
+        NSLog(@"\n");
         
-        NSLog(@"---------");
-        
-        ClassB *b = [[ClassB alloc] init];
-        
-        [b initVar];
-        [b printVar];
-        
-        NSLog(@"---------");
-        
-        Rectangle *rect = [[Rectangle alloc] init];
-        [rect setWidth:10 andHeight:20];
-        
-        XYPoint *originPoint = [[XYPoint alloc] init];
-        [originPoint setX:20 andY:30];
-        
-        rect.origin = originPoint;
-        
-        NSLog(@"Rectangle Origin : (%i, %i)", [rect origin].x, [rect origin].y);
-        NSLog(@"Rectangle Area : %i", [rect area]);
-        NSLog(@"Rectangle Perimeter : %i", [rect perimeter]);
-        
-        Square *square = [[Square alloc] init];
-        [square setSide:30];
-        NSLog(@"Square Side : %i", [square side]);
-        NSLog(@"Square Area : %i", [square area]);
-        NSLog(@"Square Perimeter : %i", [square perimeter]);
+//        [f1 print];
+//        NSLog(@"           +");
+//        [f2 print];
+//        NSLog(@"------------");
+//        fracResult = [f1 add:f2];
+//        [fracResult print];
+//        NSLog(@"\n");
     }
     return 0;
 }
