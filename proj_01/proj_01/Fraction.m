@@ -36,11 +36,12 @@
     denominator /= u;
 }
 
--(void) add:(Fraction *)f {
+-(Fraction *) add:(Fraction *)f {
     numerator = numerator * f.denominator + denominator * f.numerator;
     denominator = denominator * f.denominator;
     
     [self reduce];
+    return self;
 }
 
 -(double) convertToNum {

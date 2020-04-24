@@ -37,13 +37,13 @@ int main(int argc, const char * argv[]) {
         [compResult print];
         NSLog(@"\n");
         
-//        [f1 print];
-//        NSLog(@"           +");
-//        [f2 print];
-//        NSLog(@"------------");
-//        fracResult = [f1 add:f2];
-//        [fracResult print];
-//        NSLog(@"\n");
+        [f1 print];
+        NSLog(@"   +");
+        [f2 print];
+        NSLog(@"----");
+        fracResult = [f1 add:f2];
+        [fracResult print];
+        NSLog(@"\n");
     }
     return 0;
 }
