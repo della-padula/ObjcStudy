@@ -8,9 +8,22 @@
 
 #import "Fraction.h"
 
+static int gCounter;
+
 @implementation Fraction
 
 @synthesize numerator, denominator;
+
++(Fraction *) allocF {
+    extern int gCounter;
+    ++gCounter;
+    return [Fraction alloc];
+}
+
++(int) count {
+    extern int gCounter;
+    return gCounter;
+}
 
 -(Fraction *) initWith:(int)n over:(int)d {
     self = [super init];

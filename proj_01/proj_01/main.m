@@ -71,17 +71,18 @@ int main(int argc, const char * argv[]) {
 //            NSLog(@"Caught %@%@", exception.name, exception.reason);
 //        }
         
-//        Fraction *a, *b;
-//        a = [[Fraction alloc] initWith: 1 over: 3];
-//        b = [[Fraction alloc] initWith: 3 over: 7];
-//
-//        [a print];
-//        [b print];
+        Fraction *a, *b, *c;
+        NSLog(@"Fractions allocated: %i", [Fraction count]);
+        a = [[Fraction allocF] init];
+        b = [[Fraction allocF] init];
+        c = [[Fraction allocF] init];
         
-        NSLog(@"gGlobalVar : %i", gGlobalVar);
-        Foo *foo = [[Foo alloc] init];
-        [foo setgGlobalVar:300];
-        NSLog(@"gGlobalVar : %i", gGlobalVar);
+        NSLog(@"Fractions allocated: %i", [Fraction count]);g
+        
+//        NSLog(@"gGlobalVar : %i", gGlobalVar);
+//        Foo *foo = [[Foo alloc] init];
+//        [foo setgGlobalVar:300];
+//        NSLog(@"gGlobalVar : %i", gGlobalVar);
     }
     return 0;
 }
