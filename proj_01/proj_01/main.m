@@ -7,82 +7,47 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Square.h"
-#import "Foo.h"
-#import "Fraction.h"
-#import "Rectangle.h"
-
-int gGlobalVar = 5;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Square *mySquare = [[Square alloc] init];
+        enum month { january = 1, fabruary, march, april, may, june, july, august,
+            september, october, november, december };
+        enum month amonth;
+        int days;
         
-        // isMemberOf
+        NSLog (@"Enter month number: ");
+        scanf("%i", &amonth);
         
-        if ([mySquare isMemberOfClass:[Square class]] == YES)
-            NSLog(@"mySquare is a member of Square class");
+        switch(amonth) {
+            case january:
+            case march:
+            case may:
+            case july:
+            case august:
+            case october:
+            case december:
+                days = 31;
+                break;
+            case april:
+            case june:
+            case september:
+            case november:
+                days = 30;
+                break;
+            case fabruary:
+                days = 28;
+                break;
+            default:
+                NSLog(@"Bad Month Number");
+                days = 0;
+                break;
+        }
         
-        if ([mySquare isMemberOfClass:[Rectangle class]] == YES)
-            NSLog(@"mySquare is a member of Rectangle class");
+        if (days != 0)
+            NSLog(@"Number of days is %i", days);
         
-        if ([mySquare isMemberOfClass:[NSObject class]] == YES)
-            NSLog(@"mySquare is a member of NSObject class");
-        
-        // isKindOf
-        
-        if ([mySquare isKindOfClass:[Square class]] == YES)
-            NSLog(@"mySquare is a kind of Square class");
-        
-        if ([mySquare isKindOfClass:[Rectangle class]] == YES)
-            NSLog(@"mySquare is a kind of Rectangle class");
-        
-        if ([mySquare isKindOfClass:[NSObject class]] == YES)
-            NSLog(@"mySquare is a kind of NSObject class");
-        
-        // respondsTo
-        
-        if ([mySquare respondsToSelector:@selector(setSide:)] == YES)
-            NSLog(@"mySquare responds to setSide: method");
-        
-        if ([mySquare respondsToSelector:@selector(setWidth:andHeight:)] == YES)
-            NSLog(@"mySquare responds to setWidth:andHeight: method");
-        
-        if ([mySquare respondsToSelector:@selector(alloc)] == YES)
-            NSLog(@"mySquare responds to alloc method");
-        
-        // instancesRespondTo
-        
-        if ([Rectangle instancesRespondToSelector:@selector(setSide:)] == YES)
-            NSLog(@"Instances of Rectangle respond to setSide: method");
-        
-        if ([Square instancesRespondToSelector:@selector(setSide:)] == YES)
-            NSLog(@"Instances of Square respond to setSide: method");
-        
-        if ([Square isSubclassOfClass:[Rectangle class]] == YES)
-            NSLog(@"Square is a subclass of a Rectangle");
-        
-//        NSArray * myArray = [NSArray array];
-//
-//        @try {
-//            [myArray objectAtIndex: 2];
-//        }
-//        @catch (NSException *exception) {
-//            NSLog(@"Caught %@%@", exception.name, exception.reason);
-//        }
-        
-        Fraction *a, *b, *c;
-        NSLog(@"Fractions allocated: %i", [Fraction count]);
-        a = [[Fraction allocF] init];
-        b = [[Fraction allocF] init];
-        c = [[Fraction allocF] init];
-        
-        NSLog(@"Fractions allocated: %i", [Fraction count]);
-        
-//        NSLog(@"gGlobalVar : %i", gGlobalVar);
-//        Foo *foo = [[Foo alloc] init];
-//        [foo setgGlobalVar:300];
-//        NSLog(@"gGlobalVar : %i", gGlobalVar);
+        if (amonth == fabruary)
+            NSLog(@"...or 29 if it's a leap year");
     }
     return 0;
 }
