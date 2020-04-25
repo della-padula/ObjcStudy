@@ -10,6 +10,10 @@
 
 static int gCounter;
 
+@interface Fraction ()
+-(void) reduce;
+@end
+
 @implementation Fraction
 
 @synthesize numerator, denominator;

@@ -9,14 +9,19 @@
 #import <Foundation/Foundation.h>
 #import "Fraction.h"
 
+#define MakeFract(x, y) ([[Fraction alloc] initWith: x over: y])
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Fraction *a = [[Fraction alloc] init];
         Fraction *b = [[Fraction alloc] init];
+        Fraction *c = MakeFract(3, 8);
         Fraction *result;
         
         [a setTo:1 over:3];
         [b setTo:2 over:5];
+        
+        [c print];
         
         [a print]; NSLog(@"  +"); [b print]; NSLog(@"----");
         result = [a add: b];
