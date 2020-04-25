@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B004E02C24541E1E00C670FD /* Foo.m in Sources */ = {isa = PBXBuildFile; fileRef = B004E02B24541E1E00C670FD /* Foo.m */; };
 		B088AE20244F150C00928EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B088AE1F244F150C00928EF1 /* main.m */; };
 		B088AE282450255B00928EF1 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = B088AE272450255B00928EF1 /* Fraction.m */; };
 		B088AE2B24505F7E00928EF1 /* Inheritance.m in Sources */ = {isa = PBXBuildFile; fileRef = B088AE2A24505F7E00928EF1 /* Inheritance.m */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B004E02A24541DF000C670FD /* Foo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Foo.h; sourceTree = "<group>"; };
+		B004E02B24541E1E00C670FD /* Foo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Foo.m; sourceTree = "<group>"; };
 		B088AE1C244F150C00928EF1 /* proj_01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = proj_01; sourceTree = BUILT_PRODUCTS_DIR; };
 		B088AE1F244F150C00928EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B088AE262450254D00928EF1 /* Fraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				B088AE30245062F100928EF1 /* Rectangle.m */,
 				B088AE322450726D00928EF1 /* Complex.h */,
 				B088AE33245072BB00928EF1 /* Complex.m */,
+				B004E02A24541DF000C670FD /* Foo.h */,
+				B004E02B24541E1E00C670FD /* Foo.m */,
 			);
 			path = proj_01;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			files = (
 				B088AE2E2450616C00928EF1 /* Square.m in Sources */,
 				B088AE20244F150C00928EF1 /* main.m in Sources */,
+				B004E02C24541E1E00C670FD /* Foo.m in Sources */,
 				B088AE2B24505F7E00928EF1 /* Inheritance.m in Sources */,
 				B088AE282450255B00928EF1 /* Fraction.m in Sources */,
 				B088AE34245072BB00928EF1 /* Complex.m in Sources */,

@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Square.h"
+#import "Foo.h"
 #import "Fraction.h"
 #import "Rectangle.h"
+
+int gGlobalVar = 5;
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -68,12 +71,17 @@ int main(int argc, const char * argv[]) {
 //            NSLog(@"Caught %@%@", exception.name, exception.reason);
 //        }
         
-        Fraction *a, *b;
-        a = [[Fraction alloc] initWith: 1 over: 3];
-        b = [[Fraction alloc] initWith: 3 over: 7];
+//        Fraction *a, *b;
+//        a = [[Fraction alloc] initWith: 1 over: 3];
+//        b = [[Fraction alloc] initWith: 3 over: 7];
+//
+//        [a print];
+//        [b print];
         
-        [a print];
-        [b print];
+        NSLog(@"gGlobalVar : %i", gGlobalVar);
+        Foo *foo = [[Foo alloc] init];
+        [foo setgGlobalVar:300];
+        NSLog(@"gGlobalVar : %i", gGlobalVar);
     }
     return 0;
 }
