@@ -17,8 +17,14 @@
 -(Fraction *) initWith: (int) n over: (int) d;
 -(void) print;
 -(void) setTo: (int) n over: (int) d;
--(Fraction *) add: (Fraction *) f;
 -(void) reduce;
 -(double) convertToNum;
 
+@end
+
+@interface Fraction (MathOps)
+-(Fraction *) add: (Fraction *) f;
+-(Fraction *) mul: (Fraction *) f;
+-(Fraction *) sub: (Fraction *) f;
+-(Fraction *) div: (Fraction *) f;
 @end

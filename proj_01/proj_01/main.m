@@ -7,47 +7,36 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Fraction.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        enum month { january = 1, fabruary, march, april, may, june, july, august,
-            september, october, november, december };
-        enum month amonth;
-        int days;
+        Fraction *a = [[Fraction alloc] init];
+        Fraction *b = [[Fraction alloc] init];
+        Fraction *result;
         
-        NSLog (@"Enter month number: ");
-        scanf("%i", &amonth);
+        [a setTo:1 over:3];
+        [b setTo:2 over:5];
         
-        switch(amonth) {
-            case january:
-            case march:
-            case may:
-            case july:
-            case august:
-            case october:
-            case december:
-                days = 31;
-                break;
-            case april:
-            case june:
-            case september:
-            case november:
-                days = 30;
-                break;
-            case fabruary:
-                days = 28;
-                break;
-            default:
-                NSLog(@"Bad Month Number");
-                days = 0;
-                break;
-        }
+        [a print]; NSLog(@"  +"); [b print]; NSLog(@"----");
+        result = [a add: b];
+        [result print];
+        NSLog(@"\n");
         
-        if (days != 0)
-            NSLog(@"Number of days is %i", days);
+        [a print]; NSLog(@"  +"); [b print]; NSLog(@"----");
+        result = [a sub: b];
+        [result print];
+        NSLog(@"\n");
         
-        if (amonth == fabruary)
-            NSLog(@"...or 29 if it's a leap year");
+        [a print]; NSLog(@"  +"); [b print]; NSLog(@"----");
+        result = [a mul: b];
+        [result print];
+        NSLog(@"\n");
+        
+        [a print]; NSLog(@"  +"); [b print]; NSLog(@"----");
+        result = [a div: b];
+        [result print];
+        NSLog(@"\n");
     }
     return 0;
 }
