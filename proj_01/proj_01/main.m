@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Square.h"
+#import "Fraction.h"
 #import "Rectangle.h"
 
 int main(int argc, const char * argv[]) {
@@ -58,14 +59,21 @@ int main(int argc, const char * argv[]) {
         if ([Square isSubclassOfClass:[Rectangle class]] == YES)
             NSLog(@"Square is a subclass of a Rectangle");
         
-        NSArray * myArray = [NSArray array];
+//        NSArray * myArray = [NSArray array];
+//
+//        @try {
+//            [myArray objectAtIndex: 2];
+//        }
+//        @catch (NSException *exception) {
+//            NSLog(@"Caught %@%@", exception.name, exception.reason);
+//        }
         
-        @try {
-            [myArray objectAtIndex: 2];
-        }
-        @catch (NSException *exception) {
-            NSLog(@"Caught %@%@", exception.name, exception.reason);
-        }
+        Fraction *a, *b;
+        a = [[Fraction alloc] initWith: 1 over: 3];
+        b = [[Fraction alloc] initWith: 3 over: 7];
+        
+        [a print];
+        [b print];
     }
     return 0;
 }
