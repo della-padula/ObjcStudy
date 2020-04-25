@@ -7,43 +7,56 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Fraction.h"
-#import "Complex.h"
-#import "Inheritance.h"
 #import "Square.h"
 #import "Rectangle.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Fraction *f1 = [[Fraction alloc] init];
-        Fraction *f2 = [[Fraction alloc] init];
-        Fraction *fracResult;
+        Square *mySquare = [[Square alloc] init];
         
-        Complex *c1 = [[Complex alloc] init];
-        Complex *c2 = [[Complex alloc] init];
-        Complex *compResult;
+        // isMemberOf
         
-        [f1 setTo:1 over:10];
-        [f2 setTo:2 over:15];
+        if ([mySquare isMemberOfClass:[Square class]] == YES)
+            NSLog(@"mySquare is a member of Square class");
         
-        [c1 setReal:18.0 andImaginary:2.5];
-        [c2 setReal:-5.0 andImaginary:3.2];
+        if ([mySquare isMemberOfClass:[Rectangle class]] == YES)
+            NSLog(@"mySquare is a member of Rectangle class");
         
-        [c1 print];
-        NSLog(@"         +");
-        [c2 print];
-        NSLog(@"----------");
-        compResult = [c1 add: c2];
-        [compResult print];
-        NSLog(@"\n");
+        if ([mySquare isMemberOfClass:[NSObject class]] == YES)
+            NSLog(@"mySquare is a member of NSObject class");
         
-        [f1 print];
-        NSLog(@"   +");
-        [f2 print];
-        NSLog(@"----");
-        fracResult = [f1 add:f2];
-        [fracResult print];
-        NSLog(@"\n");
+        // isKindOf
+        
+        if ([mySquare isKindOfClass:[Square class]] == YES)
+            NSLog(@"mySquare is a kind of Square class");
+        
+        if ([mySquare isKindOfClass:[Rectangle class]] == YES)
+            NSLog(@"mySquare is a kind of Rectangle class");
+        
+        if ([mySquare isKindOfClass:[NSObject class]] == YES)
+            NSLog(@"mySquare is a kind of NSObject class");
+        
+        // respondsTo
+        
+        if ([mySquare respondsToSelector:@selector(setSide:)] == YES)
+            NSLog(@"mySquare responds to setSide: method");
+        
+        if ([mySquare respondsToSelector:@selector(setWidth:andHeight:)] == YES)
+            NSLog(@"mySquare responds to setWidth:andHeight: method");
+        
+        if ([mySquare respondsToSelector:@selector(alloc)] == YES)
+            NSLog(@"mySquare responds to alloc method");
+        
+        // instancesRespondTo
+        
+        if ([Rectangle instancesRespondToSelector:@selector(setSide:)] == YES)
+            NSLog(@"Instances of Rectangle respond to setSide: method");
+        
+        if ([Square instancesRespondToSelector:@selector(setSide:)] == YES)
+            NSLog(@"Instances of Square respond to setSide: method");
+        
+        if ([Square isSubclassOfClass:[Rectangle class]] == YES)
+            NSLog(@"Square is a subclass of a Rectangle");
     }
     return 0;
 }
