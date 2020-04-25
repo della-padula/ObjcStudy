@@ -57,6 +57,15 @@ int main(int argc, const char * argv[]) {
         
         if ([Square isSubclassOfClass:[Rectangle class]] == YES)
             NSLog(@"Square is a subclass of a Rectangle");
+        
+        NSArray * myArray = [NSArray array];
+        
+        @try {
+            [myArray objectAtIndex: 2];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Caught %@%@", exception.name, exception.reason);
+        }
     }
     return 0;
 }
