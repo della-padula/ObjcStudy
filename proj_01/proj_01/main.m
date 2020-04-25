@@ -77,7 +77,7 @@ int main(int argc, const char * argv[]) {
         b = [[Fraction allocF] init];
         c = [[Fraction allocF] init];
         
-        NSLog(@"Fractions allocated: %i", [Fraction count]);g
+        NSLog(@"Fractions allocated: %i", [Fraction count]);
         
 //        NSLog(@"gGlobalVar : %i", gGlobalVar);
 //        Foo *foo = [[Foo alloc] init];
