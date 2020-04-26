@@ -8,21 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-void (^calculateNumber) (int) = {
-    ^(int n) {
-        int i, resultNumber = 0;
-        
-        for (i = 1; i <= n; ++i) {
-            resultNumber += i;
-        }
-        NSLog(@"Result Number from 1 to %i is %i", n, resultNumber);
-    }
-};
-
 int main(int argc, char *argv[]) {
     @autoreleasepool {
-        calculateNumber(10);
-        calculateNumber(50);
-        calculateNumber(100);
+        __block int num = 10;
+        
+        void (^printNumber)(void) = {
+            ^(void) {
+                NSLog(@"num = %i", num);
+                num = 30;
+            }
+        };
+        
+        num = 20;
+        printNumber();
+        NSLog(@"num = %i", num);
     }
+    return 0;
 }
